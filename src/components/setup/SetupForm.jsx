@@ -11,6 +11,11 @@ export default function SetupForm() {
 
     const { sendSetup } = usePokeContext();
 
+    const styleInputs = {
+        ...styles.input,
+        color: colors.text
+    };
+
     const formik = useFormik({
         initialValues: initialValues,
         validationSchema: Yup.object(validationSchema()),
@@ -28,25 +33,25 @@ export default function SetupForm() {
             </View>
             <View style={styles.contentInput}>
                 <TextInput 
-                    style={[styles.input, formik.errors.firstName && styles.inputError]}
+                    style={[styleInputs, formik.errors.firstName && styles.inputError]}
                     placeholder='Nombre'
-                    placeholderTextColor={formik.errors.firstName && '#f007'}
+                    placeholderTextColor={formik.errors.firstName ? '#f007' : colors.placeholder}
                     value={formik.values.firstName}
                     onChangeText={(text) => formik.setFieldValue('firstName', text.trim())}
                 />
                 <Text style={styles.error}>{formik.errors.firstName}</Text>
                 <TextInput 
-                    style={[styles.input, formik.errors.lastName && styles.inputError]} 
+                    style={[styleInputs, formik.errors.lastName && styles.inputError]} 
                     placeholder='Apellido'
-                    placeholderTextColor={formik.errors.lastName && '#f007'}
+                    placeholderTextColor={formik.errors.lastName ? '#f007' : colors.placeholder}
                     value={formik.values.lastName}
                     onChangeText={(text) => formik.setFieldValue('lastName', text.trim())}
                 />
                 <Text style={styles.error}>{formik.errors.lastName}</Text>
                 <TextInput 
-                    style={[styles.input, formik.errors.age && styles.inputError]} 
+                    style={[styleInputs, formik.errors.age && styles.inputError]} 
                     placeholder='Edad'
-                    placeholderTextColor={formik.errors.age && '#f007'}
+                    placeholderTextColor={formik.errors.age ? '#f007' : colors.placeholder}
                     keyboardType='numeric'
                     value={formik.values.age}
                     onChangeText={(text) => formik.setFieldValue('age', text)}
@@ -97,6 +102,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 35,
         borderWidth: 1,
         borderRadius: 20,
+        borderColor: "rgba(128, 128, 128, 1)",
         height: 40,
     },
     inputError: {
