@@ -16,21 +16,21 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.diegonacimiento23.pokedex"
+      "bundleIdentifier": "com.diegonac.pokedex"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#a4161a"
       },
-      "package": "com.diegonacimiento23.pokedex"
+      "package": "com.diegonac.pokedex"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "extra": {
       "eas": {
-        "projectId": "49318278-a094-4785-9c26-23a4031806ca"
+        "projectId": "e199fb81-bc2d-447d-9f17-a3d7d5a817bf"
       }
     }
   }
