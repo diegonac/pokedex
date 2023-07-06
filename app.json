@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "pokedex",
+    "name": "Pokedex",
     "slug": "pokedex",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -9,22 +9,29 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#a4161a"
     },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.diegonacimiento23.pokedex"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+        "backgroundColor": "#a4161a"
+      },
+      "package": "com.diegonacimiento23.pokedex"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "49318278-a094-4785-9c26-23a4031806ca"
+      }
     }
   }
 }
