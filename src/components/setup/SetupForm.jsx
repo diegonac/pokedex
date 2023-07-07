@@ -6,7 +6,6 @@ import { usePokeContext } from '../../context/PokeContext';
 import MyButton from '../MyButton';
 
 export default function SetupForm() {
-
     const { colors } = useTheme();
 
     const { sendSetup } = usePokeContext();

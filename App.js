@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { StatusBar } from "expo-status-bar";
-import { Appearance, View } from "react-native";
+import { Appearance, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import * as SplashScreen from "expo-splash-screen";
 import { PokeContextProvider } from "./src/context/PokeContext";
@@ -11,6 +11,8 @@ import {
   getStorageDarkMode,
   setStorageDarkMode,
 } from "./src/api/darkModeStorage";
+import { getStorageSetup } from "./src/api/setupStorage";
+import SetupScreen from "./src/screens/SetupScreen";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -19,8 +21,17 @@ export default function App() {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
+    async function loadTheme() {
+      const response = await getStorageDarkMode();
+      if (response === null) {
+        const appearanceUser = Appearance.getColorScheme();
+        appearanceUser === "dark" ? setDarkMode(true) : setDarkMode(false);
+      } else setDarkMode(response);
+    }
+
     async function prepare() {
       try {
+        loadTheme();
         await new Promise((resolve) => setTimeout(resolve, 2000));
       } catch (e) {
         console.warn(e);
@@ -29,14 +40,6 @@ export default function App() {
       }
     }
     prepare();
-    async function loadTheme() {
-      const response = await getStorageDarkMode();
-      if (response === null) {
-        const appearanceUser = Appearance.getColorScheme();
-        appearanceUser === "dark" ? setDarkMode(true) : setDarkMode(false);
-      } else setDarkMode(response);
-    }
-    loadTheme();
   }, []);
 
   const changeTheme = useCallback(() => {

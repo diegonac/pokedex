@@ -1,5 +1,5 @@
 import Navigation from "./navigation/Navigation";
-import SetupScreen from "./screens/SetupScreen";
+import SetupNavigation from "./navigation/SetupNavigation";
 import { usePokeContext } from "./context/PokeContext";
 
 export default function Main() {
@@ -7,7 +7,7 @@ export default function Main() {
     
     return (
         <>
-            { setup ? <Navigation /> : <SetupScreen />}
+            { setup ? <Navigation /> : <SetupNavigation />}
         </>
     );
 }
