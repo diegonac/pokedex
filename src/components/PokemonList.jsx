@@ -26,7 +26,7 @@ export default function PokemonList({ navigation, pokemons, getPokemons, nextUrl
 
 const styles = StyleSheet.create({
     spinner: {
-        marginTop: 20,
-        marginBottom: 75,
+        marginTop: 10,
+        marginBottom: 90,
     }
 });

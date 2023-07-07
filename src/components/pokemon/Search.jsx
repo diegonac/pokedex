@@ -28,6 +28,7 @@ export default function Search({ navigation }) {
         setLoading(false);
     }
     function handleSearch() {
+        Keyboard.dismiss();
         if (!inputText) return null;
         setLoading(true);
         setTimeout(search, 500)

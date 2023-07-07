@@ -23,6 +23,15 @@ const styles = StyleSheet.create({
         paddingRight: 10,
         width: 120,
         fontWeight: 'bold',
+    },
+    itemSwitchContent: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingVertical: 20,
+    },
+    itemSwitch: {
+        width: 120,
+        fontWeight: 'bold',
     }
 });
 

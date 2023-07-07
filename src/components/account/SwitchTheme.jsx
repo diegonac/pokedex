@@ -11,12 +11,14 @@ export default function SwitchTheme() {
         changeTheme()
     }
     return (
-        <View style={styles.itemTextContent}>
-            <Text style={[styles.itemTextTitle, { color: colors.text }]}>Modo oscuro: </Text>
+        <View style={styles.itemSwitchContent}>
+            <Text style={[styles.itemSwitch, { color: colors.text, textAlign: 'left' }]}>Tema claro </Text>
             <Switch style={{ height: 20 }} value={darkMode} onValueChange={toggleSwitch} trackColor={{
                 false: "rgba(128, 128, 128, 0.5)",
                 true: "#a4161a6a"
             }} thumbColor="#a4161a" />
+            <Text style={[styles.itemSwitch, { color: colors.text, textAlign: 'right' }]}>Tema oscuro </Text>
+
         </View>
     );
 }

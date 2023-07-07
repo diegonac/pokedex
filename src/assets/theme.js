@@ -1,8 +1,8 @@
 const light = {
     colors: {
-        background: "#dee2e6",
+        background: "#f8f9fa",
         border: "rgb(216, 216, 216)",
-        card: "#dee2e6",
+        card: "#f8f9fa",
         notification: "rgb(255, 59, 48)",
         primary: "rgb(0, 122, 255)",
         text: "rgb(28, 28, 30)",

@@ -1,22 +1,24 @@
 import { Text, StyleSheet, Image, Pressable } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import getColorTypePokemon from '../utils/getColorTypePokemon';
+import { useTheme } from '@react-navigation/native';
 
 export default function PokemonCard({ navigation, pokemon }) {
+    const { colors } = useTheme();
 
-    const colors = pokemon.types.map(item => getColorTypePokemon(item.type.name));
+    const colorsBk = pokemon.types.map(item => getColorTypePokemon(item.type.name));
 
-    colors.length < 2 && colors.push(colors[0]);
+    colorsBk.length < 2 && colorsBk.push(colorsBk[0]);
 
     function handleCard() {
         navigation.navigate("PokemonScreen", { pokemon });
     }
 
     return (
-        <LinearGradient style={styles.cardContainer} colors={colors} >
+        <LinearGradient style={[styles.cardContainer, { shadowColor: colors.text }]} colors={colorsBk} >
             <Pressable onPress={handleCard}>
                 <Text style={styles.name}>{pokemon.name}</Text>
-                <Text style={styles.order}># {pokemon.id.toString().padStart(3, "0")}</Text>
+                <Text style={styles.order}># {pokemon.id.toString().padStart(3, 0)}</Text>
                 <Image 
                     source={{ uri: pokemon.image }} 
                     style={styles.image} 
@@ -29,8 +31,10 @@ export default function PokemonCard({ navigation, pokemon }) {
 const styles = StyleSheet.create({
     cardContainer: {
         flex: 1,
-        height: 130,
         margin: 8,
+        height: 130,
+        borderRadius: 7,
+        elevation: 7
     },
     image: {
         position: "absolute",

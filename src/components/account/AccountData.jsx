@@ -18,8 +18,8 @@ export default function AccountData() {
                 <ItemText title='Nombre' text={`${setup.firstName}`} />
                 <ItemText title='Apellido' text={setup.lastName} />
                 <ItemText title='Edad' text={setup.age} />
-                <SwitchTheme />
                 <ItemText title='Total favoritos' text={favorites.length + ' pokemones'} />
+                <SwitchTheme />
             </View>
 
         </View>
