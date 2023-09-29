@@ -1,5 +1,5 @@
 # Pokedex
-La aplicación móvil Pokedex es una plataforma integral que proporciona información detallada sobre todos los Pokemones en una interfaz intuitiva y fácil de usar. Desarrollada utilizando tecnologías de vanguardia, la aplicación se basa en la API PokeApi para garantizar datos precisos y actualizados.
+La aplicación móvil Pokedex es una plataforma integral que proporciona información detallada sobre todos los Pokemones en una interfaz intuitiva y fácil de usar. La aplicación se basa en la API PokeApi para garantizar datos precisos y actualizados.
 
 #### Características Principales
 - Tecnologías Utilizadas: La aplicación está desarrollada con React Native y Expo, aprovechando las capacidades de estas tecnologías líderes en el desarrollo móvil.
