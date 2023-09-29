@@ -8,7 +8,7 @@ The mobile app Pokedex is a comprehensive platform that provides detailed inform
 
 - Efficient State Management: An efficient state management system is implemented to optimize performance and ensure a responsive user experience.
 
-##### User Features
+#### User Features
 - Local Registration: The application allows users to register locally using Formik and Yup, providing a secure and easy registration process.
 
 - Favorites in AsyncStorage: The ability to mark Pokémon as favorites is managed through AsyncStorage, ensuring that user selections are preserved between sessions.

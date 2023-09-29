@@ -8,7 +8,7 @@ La aplicación móvil Pokedex es una plataforma integral que proporciona informa
 
 - Gestión de Estado Eficiente: Se implementa un sistema de gestión de estado eficiente para optimizar el rendimiento y garantizar una experiencia de usuario receptiva.
 
-##### Funcionalidades de Usuario
+#### Funcionalidades de Usuario
 
 - Registración Local: La aplicación permite a los usuarios registrarse localmente utilizando Formik y Yup, ofreciendo un proceso de registro seguro y fácil.
 
@@ -46,7 +46,7 @@ Si deseas utilizar Expo Go en tu dispositivo Android para escanear el código QR
 2. Abre Expo Go y selecciona la opción "Scan QR Code" desde el menú.
 3. Escanea el código QR que se muestra al iniciar el proyecto Pokedex.
 
-¡Listo! Ahora podrás interactuar con Pokedex en tu dispositivo Android.
+Listo! Ahora podrás interactuar con Pokedex en tu dispositivo Android.
 
 ---
 
